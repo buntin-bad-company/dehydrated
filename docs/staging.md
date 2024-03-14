@@ -1,0 +1,14 @@
+# Staging
+
+Let’s Encrypt has stringent rate limits in place.
+
+If you start testing using the production endpoint (which is the default),
+you will quickly hit these limits and find yourself locked out.
+
+To avoid this, please set the CA property to the Let’s Encrypt staging server URL in your config file:
+
+```bash
+CA="https://acme-staging-v02.api.letsencrypt.org/directory"
+```
+
+Alternatively you can define the CA using the CLI argument `--ca letsencrypt-test` (`letsencrypt-test` is an integrated preset-CA corresponding to the URL above).
